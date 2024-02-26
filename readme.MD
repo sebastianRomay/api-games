@@ -26,7 +26,7 @@ Para utilizar estos endpoints, simplemente realiza las solicitudes HTTP correspo
 
 - Para obtener información detallada de un juego con ID 010: 
 
-`GET https://api-games-jk31.onrender.com/products/123`
+`GET https://api-games-jk31.onrender.com/products/010`
 
 - Para agregar un nuevo juego: 
 
