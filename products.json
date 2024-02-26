@@ -1,0 +1,98 @@
+[
+  {
+    "id": "001",
+    "title": "Halo Infinite",
+    "description": "El último juego de la legendaria serie de ciencia ficción.",
+    "price": 14000,
+    "image": "https://store-images.s-microsoft.com/image/apps.21536.13727851868390641.c9cc5f66-aff8-406c-af6b-440838730be0.68796bde-cbf5-4eaa-a299-011417041da6",
+    "stock": 50
+  },
+  {
+    "id": "002",
+    "title": "Forza Horizon 5",
+    "description": "Disfruta de la carrera más impresionante con gráficos asombrosos.",
+    "price": 20000,
+    "image": "https://store-images.s-microsoft.com/image/apps.49800.13718773309227929.bebdcc0e-1ed5-4778-8732-f4ef65a2f445.9ac09d39-064d-466c-81ca-2f1b6f0b95c5",
+    "stock": 40
+  },
+  {
+    "id": "003",
+    "title": "Gears 5",
+    "description": "Lucha contra los enemigos más feroces en un mundo post-apocalíptico.",
+    "price": 10000,
+    "image": "https://store-images.s-microsoft.com/image/apps.9700.14591801423393397.e1044226-28d7-42f6-a357-7102f7d1a4b3.b11e46da-8c40-42d7-8a61-f98879101d4a",
+    "stock": 30
+  },
+  {
+    "id": "004",
+    "title": "FIFA 23",
+    "description": "Disfruta del juego de fútbol más realista con las últimas actualizaciones.",
+    "price": 30000,
+    "image": "https://store-images.s-microsoft.com/image/apps.21020.13550335257385479.4af075db-780e-4e36-9880-9b88a74dc6de.595ea9f5-8f3e-4ad1-b590-3f9e588bf46d",
+    "stock": 60
+  },
+  {
+    "id": "005",
+    "title": "Call of Duty®: Black Ops III",
+    "description": "Únete a la batalla épica en un campo de batalla de gran escala.",
+    "price": 80000,
+    "image": "https://store-images.s-microsoft.com/image/apps.7208.68678970150079696.6bf4fb5c-7bd7-4b8c-afde-c7bdc81ee49f.3d56c96b-108b-481a-a638-484da2a5d2e1?q=90&w=177&h=265",
+    "stock": 70
+  },
+  {
+    "id": "006",
+    "title": "Assassin's Creed Valhalla",
+    "description": "Explora el mundo vikingo y vive una épica aventura como un guerrero.",
+    "price": 38000,
+    "image": "https://store-images.s-microsoft.com/image/apps.1547.14585440003614248.9f7109bf-73f7-4bc7-ba61-1eeb006d905a.75930d81-6e85-436d-9b61-1279b8dd9b31",
+    "stock": 25
+  },
+  {
+    "id": "007",
+    "title": "Red Dead Redemption 2",
+    "description": "Embárcate en una emocionante historia en el Salvaje Oeste.",
+    "price": 49000,
+    "image": "https://store-images.s-microsoft.com/image/apps.34695.13942869738016799.078aba97-2f28-440f-97b6-b852e1af307a.b278e12f-c22c-4a2a-bb18-dfd26ca6cafc?q=90&w=177&h=265",
+    "stock": 35
+  },
+  {
+    "id": "008",
+    "title": "Minecraft",
+    "description": "Construye y explora mundos infinitos en este juego de creatividad.",
+    "price": 7000,
+    "image": "https://store-images.s-microsoft.com/image/apps.17382.13850085746326678.a9b1e0db-29d0-40f3-a86c-2155353d053c.b8233937-28f5-4fdf-a696-6ef666a6ff6e?q=90&w=177&h=265",
+    "stock": 80
+  },
+  {
+    "id": "009",
+    "title": "NBA 2K24",
+    "description": "Experimenta la emoción del baloncesto con gráficos increíbles.",
+    "price": 49000,
+    "image": "https://store-images.s-microsoft.com/image/apps.11707.14149820581167521.ee00106c-c535-40d2-8892-1082ebcf87c0.4bed6227-a0cf-48b9-88d6-febe9c6c65eb?q=90&w=177&h=265",
+    "stock": 45
+  },
+  {
+    "id": "010",
+    "title": "Cyberpunk 2077",
+    "description": "Sumérgete en un mundo futurista lleno de tecnología y peligros.",
+    "price": 16000,
+    "image": "https://store-images.s-microsoft.com/image/apps.47379.63407868131364914.bcaa868c-407e-42c2-baeb-48a3c9f29b54.89bb995b-b066-4a53-9fe4-0260ce07e894",
+    "stock": 20
+  },
+  {
+    "id": "011",
+    "title": "The Witcher 3: Wild Hunt",
+    "description": "Embárcate en una épica cacería de monstruos en un mundo abierto.",
+    "price": 24000,
+    "image": "https://store-images.s-microsoft.com/image/apps.53717.65858607118306853.39ed2a08-df0d-4ae1-aee0-c66ffb783a34.80ba72da-abfb-4af6-81f2-a443d12fb870?q=90&w=177&h=265",
+    "stock": 15
+  },
+  {
+    "id": "012",
+    "title": "Far Cry 6",
+    "description": "Lucha contra un régimen opresivo en un paraíso tropical lleno de peligros.",
+    "price": 40000,
+    "image": "https://store-images.s-microsoft.com/image/apps.41566.14115267245615103.8e12f551-059b-455a-97ec-4b8173f3621e.072dfa13-d1bd-4242-8154-901de8c1b771",
+    "stock": 30
+  }
+]
