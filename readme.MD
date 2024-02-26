@@ -34,11 +34,11 @@ Para utilizar estos endpoints, simplemente realiza las solicitudes HTTP correspo
 
 - Para actualizar un juego existente con ID 010: 
 
-`PUT https://api-games-jk31.onrender.com/products/456`
+`PUT https://api-games-jk31.onrender.com/products/010`
 
 - Para eliminar un juego con ID 010: 
 
-`DELETE https://api-games-jk31.onrender.com/products/789`
+`DELETE https://api-games-jk31.onrender.com/products/010`
 
 
 La realizacion de esta API es 100% con fines de practica.
