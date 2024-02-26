@@ -7,6 +7,41 @@ app.use(express.json());
 // Ruta al archivo JSON
 const productsFilePath = 'products.json';
 
+
+// Endpoint para mostrar endpoints disponibles
+app.get('/', (req, res) => {
+    const endpoints = {
+        endpoints: [
+            { 
+                method: 'GET',
+                endpoint: '/products',
+                description: 'Obtener todos los productos o filtrar productos por cualquier parámetro'
+            },
+            {
+                method: 'GET',
+                endpoint: '/products/:id',
+                description: 'Obtener producto por ID'
+            },
+            {
+                method: 'POST',
+                endpoint: '/products',
+                description: 'Crear nuevo producto'
+            },
+            {
+                method: 'PUT',
+                endpoint: '/products/:id',
+                description: 'Actualizar un producto por ID'
+            },
+            {
+                method: 'DELETE',
+                endpoint: '/products/:id',
+                description: 'Eliminar Producto por ID'
+            }
+        ]
+    };
+    res.json(endpoints);
+});
+
 // Obtener todos los productos o filtrar productos por cualquier parámetro
 app.get('/products', async (req, res) => {
     try {
