@@ -38,7 +38,14 @@ app.get('/products/:id', async (req, res) => {
 // Crear nuevo producto
 app.post('/products', async (req, res) => {
     try {
+        const requiredFields = ['id', 'title', 'description', 'price', 'image', 'stock'];
         const newProduct = req.body;
+
+        const missingFields = requiredFields.filter(field => !(field in newProduct));
+        if (missingFields.length > 0) {
+            return res.status(400).json({ mensaje: 'Faltan campos requeridos', camposFaltantes: missingFields });
+        }
+
         const productsData = await fs.readFile(productsFilePath);
         const products = JSON.parse(productsData);
         products.push(newProduct);
@@ -53,16 +60,18 @@ app.post('/products', async (req, res) => {
 app.put('/products/:id', async (req, res) => {
     try {
         const id = req.params.id;
-        const updatedProduct = req.body;
+        const updatedFields = req.body;
 
         const productsData = await fs.readFile(productsFilePath);
         let products = JSON.parse(productsData);
         const index = products.findIndex(product => product.id === id);
 
         if (index !== -1) {
-            products[index] = updatedProduct;
+            products[index] = { ...products[index], ...updatedFields };
+            console.log(products[index])
+
             await fs.writeFile(productsFilePath, JSON.stringify(products, null, 2));
-            return res.json({ mensaje: 'Producto actualizado exitosamente', producto: updatedProduct });
+            return res.json({ mensaje: 'Producto actualizado exitosamente', producto: products[index] });
         } else {
             return res.status(404).json({ mensaje: 'Producto no encontrado' });
         }
@@ -70,6 +79,7 @@ app.put('/products/:id', async (req, res) => {
         return res.status(500).json({ mensaje: 'Error al actualizar el producto', error: error });
     }
 });
+
 
 // Eliminar Producto
 app.delete('/products/:id', async (req, res) => {
