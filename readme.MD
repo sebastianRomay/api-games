@@ -14,6 +14,7 @@ La API expone los siguientes endpoints:
 
 - `GET /products`: Obtiene todos los juegos disponibles.
 - `GET /products/:id`: Obtiene información detallada de un juego por su ID.
+- `GET /products/?id=010`: Obtieneinformacion de un juego por parámetros de consulta.
 - `POST /products`: Agrega un nuevo juego a la colección.
 - `PUT /products/:id`: Actualiza la información de un juego existente.
 - `DELETE /products/:id`: Elimina un juego de la colección.
@@ -27,6 +28,10 @@ Para utilizar estos endpoints, simplemente realiza las solicitudes HTTP correspo
 - Para obtener información detallada de un juego con ID 010: 
 
 `GET https://api-games-jk31.onrender.com/products/010`
+
+Para filtrar juegos por parámetros de consulta:
+
+`GET https://api-games-jk31.onrender.com/products/?title=minecraft`
 
 - Para agregar un nuevo juego: 
 

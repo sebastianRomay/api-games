@@ -7,31 +7,45 @@ app.use(express.json());
 // Ruta al archivo JSON
 const productsFilePath = 'products.json';
 
-// Obtener todos los productos
+// Obtener todos los productos o filtrar productos por cualquier parámetro
 app.get('/products', async (req, res) => {
     try {
+        const queryParams = req.query;
         const productsData = await fs.readFile(productsFilePath);
         const products = JSON.parse(productsData);
-        res.json(products);
+
+        if (Object.keys(queryParams).length > 0) {
+            const filteredProducts = filterProductsByQueryParams(products, queryParams);
+            return res.json(filteredProducts);
+        } else {
+            return res.json(products);
+        }
     } catch (error) {
-        res.status(500).json({ mensaje: 'Error al obtener los productos', error: error });
+        return res.status(500).json({ mensaje: 'Error al obtener los productos', error: error });
     }
 });
 
-// Obtener producto por ID
+// Obtener producto por ID o filtrar productos por cualquier parámetro
 app.get('/products/:id', async (req, res) => {
     try {
-        const id = req.params.id;
+        const idOrQueryParams = req.params.id;
         const productsData = await fs.readFile(productsFilePath);
         const products = JSON.parse(productsData);
-        const product = products.find(product => product.id === id);
-        if (product) {
-            res.json(product);
+
+        if (idOrQueryParams) {
+            const product = products.find(product => product.id === idOrQueryParams);
+            if (product) {
+                return res.json(product);
+            } else {
+                return res.status(404).json({ mensaje: 'Producto no encontrado' });
+            }
         } else {
-            res.status(404).json({ mensaje: 'Producto no encontrado' });
+            const queryParams = req.query;
+            const filteredProducts = filterProductsByQueryParams(products, queryParams);
+            return res.json(filteredProducts);
         }
     } catch (error) {
-        res.status(500).json({ mensaje: 'Error al obtener el producto', error: error });
+        return res.status(500).json({ mensaje: 'Error al obtener el producto', error: error });
     }
 });
 
@@ -56,7 +70,7 @@ app.post('/products', async (req, res) => {
     }
 });
 
-// Actualizar un producto por ID
+// Actualizar un producto por ID o filtrar productos por cualquier parámetro
 app.put('/products/:id', async (req, res) => {
     try {
         const id = req.params.id;
@@ -64,24 +78,27 @@ app.put('/products/:id', async (req, res) => {
 
         const productsData = await fs.readFile(productsFilePath);
         let products = JSON.parse(productsData);
-        const index = products.findIndex(product => product.id === id);
-
-        if (index !== -1) {
-            products[index] = { ...products[index], ...updatedFields };
-            console.log(products[index])
-
-            await fs.writeFile(productsFilePath, JSON.stringify(products, null, 2));
-            return res.json({ mensaje: 'Producto actualizado exitosamente', producto: products[index] });
+        
+        if (id) {
+            const index = products.findIndex(product => product.id === id);
+            if (index !== -1) {
+                products[index] = { ...products[index], ...updatedFields };
+                await fs.writeFile(productsFilePath, JSON.stringify(products, null, 2));
+                return res.json({ mensaje: 'Producto actualizado exitosamente', producto: products[index] });
+            } else {
+                return res.status(404).json({ mensaje: 'Producto no encontrado' });
+            }
         } else {
-            return res.status(404).json({ mensaje: 'Producto no encontrado' });
+            const queryParams = req.query;
+            const filteredProducts = filterProductsByQueryParams(products, queryParams);
+            return res.json(filteredProducts);
         }
     } catch (error) {
         return res.status(500).json({ mensaje: 'Error al actualizar el producto', error: error });
     }
 });
 
-
-// Eliminar Producto
+// Eliminar Producto por ID
 app.delete('/products/:id', async (req, res) => {
     try {
         const id = req.params.id;
@@ -102,6 +119,25 @@ app.delete('/products/:id', async (req, res) => {
     }
 });
 
+// Función para filtrar productos según los parámetros de consulta
+function filterProductsByQueryParams(products, queryParams) {
+    let filteredProducts = [...products];
+
+    Object.keys(queryParams).forEach(param => {
+        const paramValue = queryParams[param];
+        filteredProducts = filteredProducts.filter(product => {
+            if (typeof product[param] === 'string' && typeof paramValue === 'string') {
+                return product[param].toLowerCase().includes(paramValue.toLowerCase());
+            } else if (typeof product[param] === 'number' && !isNaN(parseFloat(paramValue))) {
+                return product[param] === parseFloat(paramValue);
+            } else {
+                return product[param] === paramValue;
+            }
+        });
+    });
+
+    return filteredProducts;
+}
 
 const PORT = 3004;
 
