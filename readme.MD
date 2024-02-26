@@ -21,18 +21,23 @@ La API expone los siguientes endpoints:
 Para utilizar estos endpoints, simplemente realiza las solicitudes HTTP correspondientes a la URL base junto con la ruta del endpoint deseado.
 
 - Para obtener todos los juegos: 
+
 `GET https://api-games-jk31.onrender.com/products`
 
 - Para obtener información detallada de un juego con ID 010: 
+
 `GET https://api-games-jk31.onrender.com/products/123`
 
 - Para agregar un nuevo juego: 
+
 `POST https://api-games-jk31.onrender.com/products`
 
 - Para actualizar un juego existente con ID 010: 
+
 `PUT https://api-games-jk31.onrender.com/products/456`
 
 - Para eliminar un juego con ID 010: 
+
 `DELETE https://api-games-jk31.onrender.com/products/789`
 
 
