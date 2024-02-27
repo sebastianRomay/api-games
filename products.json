@@ -1,98 +1,110 @@
 [
   {
     "title": "Halo Infinite",
-    "description": "El último juego de la legendaria serie de ciencia ficción.",
+    "description": "Cuando se pierde toda esperanza y el destino de la humanidad pende de un hilo, el Jefe Maestro esta listo para enfrentarse al enemigo mas despiadado al que se haya enfrentado. Entra en la armadura del heroe mas grande de la humanidad para experimentar una aventura epica de mundo abierto y explora las enormes dimensiones del anillo Halo.",
     "price": 14000,
     "image": "https://store-images.s-microsoft.com/image/apps.21536.13727851868390641.c9cc5f66-aff8-406c-af6b-440838730be0.68796bde-cbf5-4eaa-a299-011417041da6",
     "stock": 50,
-    "id": "01"
+    "id": "01",
+    "category": "Accion"
   },
   {
     "title": "Forza Horizon 5",
-    "description": "Disfruta de la carrera más impresionante con gráficos asombrosos.",
+    "description": "Te espera tu aventura definitiva en Horizon! Conduce cientos de autos fenomenales de todo el mundo en emocionantes expediciones a lo largo y ancho de los impactantes paisajes de Mexico, en un juego ambientado en un mundo abierto que esta en constante evolucion.",
     "price": 20000,
     "image": "https://store-images.s-microsoft.com/image/apps.49800.13718773309227929.bebdcc0e-1ed5-4778-8732-f4ef65a2f445.9ac09d39-064d-466c-81ca-2f1b6f0b95c5",
     "stock": 40,
-    "id": "02"
+    "id": "02",
+    "category": "Carreras"
   },
   {
     "title": "Gears 5",
-    "description": "Lucha contra los enemigos más feroces en un mundo post-apocalíptico.",
+    "description": "De una de las sagas mas aclamadas de los juegos, la famosa campana de Gears 5, el modo multijugador renovado y la expansion Destrozacolmenas estan optimizados para la Xbox Series X y Xbox Series S",
     "price": 10000,
     "image": "https://store-images.s-microsoft.com/image/apps.9700.14591801423393397.e1044226-28d7-42f6-a357-7102f7d1a4b3.b11e46da-8c40-42d7-8a61-f98879101d4a",
     "stock": 30,
-    "id": "03"
+    "id": "03",
+    "category": "Accion"
   },
   {
     "title": "FIFA 23",
-    "description": "Disfruta del juego de fútbol más realista con las últimas actualizaciones.",
+    "description": "Vive la maxima competencia del futbol internacional femenil en EA SPORTS™ FIFA 23 con la FIFA Women’s World Cup Australia and New Zealand 2023™, que estara disponible el 27 de junio sin costo adicional*. Representa los colores de tu pais y vive el torneo con la experiencia EA SPORTS™ FIFA Women's World Cup™ mas inmersiva hasta el momento, con cada uno de los 32 paises clasificados, apariencias personalizadas de los estadios, cinematicas, presentaciones de partidos, comentarios exclusivos y, por supuesto, el trofeo autentico en la final.",
     "price": 30000,
     "image": "https://store-images.s-microsoft.com/image/apps.21020.13550335257385479.4af075db-780e-4e36-9880-9b88a74dc6de.595ea9f5-8f3e-4ad1-b590-3f9e588bf46d",
     "stock": 60,
-    "id": "04"
+    "id": "04",
+    "category": "Deportes"
   },
   {
     "title": "Call of Duty®: Black Ops III",
-    "description": "Únete a la batalla épica en un campo de batalla de gran escala.",
+    "description": "Call of Duty: Black Ops III combina tres modos de juego unicos: campana, multijugador y Zombis, y ofrece a los fans el juego mas profundo y ambicioso de la historia de Call of Duty. La campana es una experiencia cooperativa en linea para hasta cuatro jugadores, pero tambien una emocionante aventura cinematografica en solitario. El multijugador sera el mas profundo y cautivador de la franquicia hasta la fecha, con nuevas formas de ascender de rango y personalizar y preparar la batalla. Y Zombis ofrece una nueva experiencia espectacular con su propia historia.",
     "price": 80000,
     "image": "https://store-images.s-microsoft.com/image/apps.7208.68678970150079696.6bf4fb5c-7bd7-4b8c-afde-c7bdc81ee49f.3d56c96b-108b-481a-a638-484da2a5d2e1?q=90&w=177&h=265",
     "stock": 70,
-    "id": "05"
+    "id": "05",
+    "category": "Accion"
   },
   {
     "title": "Assassin's Creed Valhalla",
-    "description": "Explora el mundo vikingo y vive una épica aventura como un guerrero.",
+    "description": "El viaje de Eivor llega a su fin en Assassin's Creed Valhalla: El ultimo capitulo, un nuevo paquete de historia gratuito que cierra la saga del Matalobos. Una historia comun es una mision gratuita de Assassin's Creed Valhalla protagonizada por Roshan, de Assassin's Creed Mirage.",
     "price": 38000,
     "image": "https://store-images.s-microsoft.com/image/apps.1547.14585440003614248.9f7109bf-73f7-4bc7-ba61-1eeb006d905a.75930d81-6e85-436d-9b61-1279b8dd9b31",
     "stock": 25,
-    "id": "06"
+    "id": "06",
+    "category": "Accion"
   },
   {
     "title": "Red Dead Redemption 2",
-    "description": "Embárcate en una emocionante historia en el Salvaje Oeste.",
+    "description": "Estados Unidos, 1899. Arthur Morgan y la banda de Van der Linde son forajidos buscados. Con agentes federales y los mejores cazarrecompensas pisandoles los talones, la banda debera abrirse camino por el salvaje territorio del corazon de Estados Unidos a base de robos y peleas para sobrevivir. Mientras las divisiones internas aumentan y amenazan con desmantelar el grupo, Arthur debe elegir entre sus propios ideales y la lealtad a la banda que lo vio crecer.",
     "price": 49000,
     "image": "https://store-images.s-microsoft.com/image/apps.34695.13942869738016799.078aba97-2f28-440f-97b6-b852e1af307a.b278e12f-c22c-4a2a-bb18-dfd26ca6cafc?q=90&w=177&h=265",
     "stock": 35,
-    "id": "07"
+    "id": "07",
+    "category": "Aventura"
   },
   {
     "title": "Minecraft",
-    "description": "Construye y explora mundos infinitos en este juego de creatividad.",
+    "description": "Explora mundos generados al azar y construye cosas increibles, desde la mas humilde de las casas hasta el mas majestuoso de los castillos. Juega en el modo creativo con recursos ilimitados o extrae en las profundidades del mundo, crea armas y armaduras para defenderte de enemigos peligrosos en el modo supervivencia.",
     "price": 7000,
     "image": "https://store-images.s-microsoft.com/image/apps.17382.13850085746326678.a9b1e0db-29d0-40f3-a86c-2155353d053c.b8233937-28f5-4fdf-a696-6ef666a6ff6e?q=90&w=177&h=265",
     "stock": 80,
-    "id": "08"
+    "id": "08",
+    "category": "Simulacion"
   },
   {
     "title": "NBA 2K24",
-    "description": "Experimenta la emoción del baloncesto con gráficos increíbles.",
+    "description": "Arma tu equipo y vive el pasado, el presente y el futuro de la cultura del baloncesto en NBA 2K24. Disfruta de una experiencia pura y completa con opciones personalizadas ilimitadas de MyPLAYER, en MyCAREER. Colecciona una gran variedad de leyendas y arma tu alineacion ideal en MyTEAM. Siente una mayor respuesta en el juego y disfruta de visuales mejoradas mientras juegas con tus equipos favoritos de la NBA y la WNBA en JUEGA AHORA.",
     "price": 49000,
     "image": "https://store-images.s-microsoft.com/image/apps.11707.14149820581167521.ee00106c-c535-40d2-8892-1082ebcf87c0.4bed6227-a0cf-48b9-88d6-febe9c6c65eb?q=90&w=177&h=265",
     "stock": 45,
-    "id": "09"
+    "id": "09",
+    "category": "Deportes"
   },
   {
     "title": "Cyberpunk 2077",
-    "description": "Sumérgete en un mundo futurista lleno de tecnología y peligros.",
+    "description": "Cyberpunk 2077 es un RPG de accion y aventura en mundo abierto ambientado en Night City, una megalopolis obsesionada con el poder, el glamur y la modificacion corporal. Encarnaras a V, merc cyberpunk, y te enfrentaras a las fuerzas mas poderosas de la ciudad en una lucha por la gloria y la supervivencia. Aqui nacen las leyendas. Cual sera la tuya?",
     "price": 16000,
     "image": "https://store-images.s-microsoft.com/image/apps.47379.63407868131364914.bcaa868c-407e-42c2-baeb-48a3c9f29b54.89bb995b-b066-4a53-9fe4-0260ce07e894",
     "stock": 20,
-    "id": "10"
+    "id": "10",
+    "category": "RPG"
   },
   {
-    "title": "The Witcher 3: Wild Hunt",
-    "description": "Embárcate en una épica cacería de monstruos en un mundo abierto.",
+    "title": "Bluey: El Videojuego",
+    "description": "Pasalo genial con Bluey y su familia en Bluey: el videojuego! Juega a una historia completamente nueva a lo largo de cuatro aventuras interactivas. Podras explorar por primera vez lugares iconicos como la casa de los Heeler, los parques, el arroyo y, ademas, una playa! Juega a tus juegos favoritos de la serie, como Que no toque el suelo!, A la caza de Charlatan! y muchos mas.",
     "price": 24000,
-    "image": "https://store-images.s-microsoft.com/image/apps.53717.65858607118306853.39ed2a08-df0d-4ae1-aee0-c66ffb783a34.80ba72da-abfb-4af6-81f2-a443d12fb870?q=90&w=177&h=265",
+    "image": "https://store-images.s-microsoft.com/image/apps.4223.13951667472045163.3fb7085f-1bf8-4c11-9c65-272ecae540f9.921077ce-509a-436f-b5c2-f3b5b72eaa36",
     "stock": 15,
-    "id": "11"
+    "id": "11",
+    "category": "Familia"
   },
   {
     "title": "Far Cry 6",
-    "description": "Lucha contra un régimen opresivo en un paraíso tropical lleno de peligros.",
+    "description": "Bienvenido a Yara, un paraiso tropical congelado en el tiempo. Como dictador de Yara, Anton Castillo esta determinado a restaurar la antigua gloria de su nacion a cualquier costo con su hijo Diego, siguiendo sus sangrientos pasos. Su opresivo mandato ha hecho estallar una revolucion.",
     "price": 40000,
     "image": "https://store-images.s-microsoft.com/image/apps.41566.14115267245615103.8e12f551-059b-455a-97ec-4b8173f3621e.072dfa13-d1bd-4242-8154-901de8c1b771",
     "stock": 30,
-    "id": "12"
+    "id": "12",
+    "category": "Accion"
   }
 ]

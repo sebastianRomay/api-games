@@ -120,7 +120,7 @@ app.get('/products/:id', async (req, res) => {
 // Crear nuevo producto
 app.post('/products', async (req, res) => {
     try {
-        const requiredFields = ['title', 'description', 'price', 'image', 'stock'];
+        const requiredFields = ['title', 'description', 'price', 'image', 'stock', 'category'];
         const newProduct = req.body;
 
         // Obtén todos los productos para calcular el próximo ID
