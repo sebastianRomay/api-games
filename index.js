@@ -7,6 +7,36 @@ app.use(express.json());
 // Ruta al archivo JSON
 const productsFilePath = 'products.json';
 
+// Función para obtener el próximo ID autoincremental
+function getNextId(products) {
+    const lastId = products.reduce((maxId, product) => {
+        const productId = parseInt(product.id);
+        return productId > maxId ? productId : maxId;
+    }, 0);
+
+    return String(lastId + 1).padStart(2, '0');
+}
+
+
+// Función para filtrar productos según los parámetros de consulta
+function filterProductsByQueryParams(products, queryParams) {
+    let filteredProducts = [...products];
+
+    Object.keys(queryParams).forEach(param => {
+        const paramValue = queryParams[param];
+        filteredProducts = filteredProducts.filter(product => {
+            if (typeof product[param] === 'string' && typeof paramValue === 'string') {
+                return product[param].toLowerCase().includes(paramValue.toLowerCase());
+            } else if (typeof product[param] === 'number' && !isNaN(parseFloat(paramValue))) {
+                return product[param] === parseFloat(paramValue);
+            } else {
+                return product[param] === paramValue;
+            }
+        });
+    });
+
+    return filteredProducts;
+}
 
 // Endpoint para mostrar endpoints disponibles
 app.get('/', (req, res) => {
@@ -87,16 +117,21 @@ app.get('/products/:id', async (req, res) => {
 // Crear nuevo producto
 app.post('/products', async (req, res) => {
     try {
-        const requiredFields = ['id', 'title', 'description', 'price', 'image', 'stock'];
+        const requiredFields = ['title', 'description', 'price', 'image', 'stock'];
         const newProduct = req.body;
+
+        // Obtén todos los productos para calcular el próximo ID
+        const productsData = await fs.readFile(productsFilePath);
+        const products = JSON.parse(productsData);
+
+        // Asigna un ID autoincremental al nuevo producto
+        newProduct.id = getNextId(products);
 
         const missingFields = requiredFields.filter(field => !(field in newProduct));
         if (missingFields.length > 0) {
             return res.status(400).json({ mensaje: 'Faltan campos requeridos', camposFaltantes: missingFields });
         }
 
-        const productsData = await fs.readFile(productsFilePath);
-        const products = JSON.parse(productsData);
         products.push(newProduct);
         await fs.writeFile(productsFilePath, JSON.stringify(products, null, 2));
         res.status(201).json({ mensaje: 'Producto creado exitosamente', producto: newProduct });
@@ -104,6 +139,7 @@ app.post('/products', async (req, res) => {
         res.status(500).json({ mensaje: 'Error al crear el producto', error: error });
     }
 });
+
 
 // Actualizar un producto por ID o filtrar productos por cualquier parámetro
 app.put('/products/:id', async (req, res) => {
@@ -153,26 +189,6 @@ app.delete('/products/:id', async (req, res) => {
         return res.status(500).json({ mensaje: 'Error al eliminar el producto', error: error });
     }
 });
-
-// Función para filtrar productos según los parámetros de consulta
-function filterProductsByQueryParams(products, queryParams) {
-    let filteredProducts = [...products];
-
-    Object.keys(queryParams).forEach(param => {
-        const paramValue = queryParams[param];
-        filteredProducts = filteredProducts.filter(product => {
-            if (typeof product[param] === 'string' && typeof paramValue === 'string') {
-                return product[param].toLowerCase().includes(paramValue.toLowerCase());
-            } else if (typeof product[param] === 'number' && !isNaN(parseFloat(paramValue))) {
-                return product[param] === parseFloat(paramValue);
-            } else {
-                return product[param] === paramValue;
-            }
-        });
-    });
-
-    return filteredProducts;
-}
 
 const PORT = 3004;
 
